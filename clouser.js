@@ -1,7 +1,8 @@
-//  clouser example
+//  clouser example -> in simple the child can access the paramenter of the parent function
 const func1 = (a, b) => {
   const sum = a + b;
   console.log(sum);
+  //    here with the clouser the child can access the parent func arguments
   return {
     func2: (num) => {
       console.log(a + b + num);
