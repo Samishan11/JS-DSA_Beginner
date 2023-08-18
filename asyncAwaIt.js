@@ -14,5 +14,5 @@ async function main() {
   const result = await handlePromise(3, 5);
   console.log(result);
 }
-s
+
 main();
