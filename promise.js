@@ -19,7 +19,7 @@ function promise() {
   });
 }
 
-async function main() {
+function main() {
   console.log("Fetching....");
   promise()
     .then((res) => console.log(res))
