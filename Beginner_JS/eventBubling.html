@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling Example</title>
+</head>
+
+<body>
+    <div style="height: 100vh; background-color: red; display: flex; justify-content: center; align-items: center;"
+        id="parent">
+        <div>
+            <button type="button" style="width: 100px; height: 30px;">click me</button>
+        </div>
+    </div>
+    <script>
+        var num1 = 5;
+        var num2 = 10;
+
+        // Parent element click event listener
+        //  event bubling -> child -> parnet 
+        document.getElementById("parent").addEventListener("click", (e) => {
+            console.log("Parent div clicked:", num1);
+        });
+
+        // with the help of Propagation stop you can denay event bubbling
+        document.querySelector("button").addEventListener("click", (e) => {
+            // Prevents event propagation to parent
+            e.stopPropagation();
+            console.log("Button clicked:", num2);
+        });
+    </script>
+</body>
+
+</html>
